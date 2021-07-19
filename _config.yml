@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Pengcheng Li (李鹏程)"
-  avatar           : "figures/profile.png"
+  avatar           : "profile.png"
   bio              : "Ph.D student @CQUPT"
   location         : "Chongqing"
   employer         :
