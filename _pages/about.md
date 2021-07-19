@@ -14,9 +14,9 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 
 <h2>News</h2>
 <ul>
-<li><p><font color="red">Good luck.</font></p>
+<li><p><font color="red">Hoping for the good luck.</font></p>
 </li>
-<li><p>[07/2021] One paper "XXX" was accepted at <b>xxx</b>.</p>
+<li><p>[10/2020] One paper "TSASNet: Tooth segmentation on dental panoramic X-ray images by Two-Stage Attention Segmentation Network" was accepted at <b>Knowledge-Based Systems</b>.</p>
 </li>
 </ul>
 
@@ -46,7 +46,7 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 </ul></td>
 </tr>
 </tbody></table>
-			
+​			
 
 <table>
 <tbody><tr>
@@ -55,7 +55,7 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 <li><p>
 	MSLPNet: multi-scale location perception network for dental panoramic X-ray image segmentation
 	<br>Qiaoyi Chen, Yue Zhao*, Yang Liu, Yongqing Sun, Chongshi Yang, <b>Pengcheng Li</b>, Lingming Zhang, Chenqiang Gao.<br> 
-	<i>Neural Computing and Applications (IF: 5.606), DOI: 10.1016/j.knosys.2020.106338.</i><br>
+	<i>Neural Computing and Applications (IF: 5.606), DOI: 10.1007/s00521-021-05790-5.</i><br>
 	[<a href="https://link.springer.com/article/10.1007/s00521-021-05790-5">Paper</a>]
     </p>
 </li>
