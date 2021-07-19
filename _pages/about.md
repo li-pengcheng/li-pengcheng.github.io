@@ -63,5 +63,3 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 </tr>
 </tbody></table>
 
-
-
