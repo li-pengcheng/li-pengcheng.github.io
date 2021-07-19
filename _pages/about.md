@@ -23,7 +23,7 @@ I received my Ph.D. degree in the Department of Computer Science and Technology 
 
 <h2>News</h2>
 <ul>
-	<li><p><font color="red">Currently, I am looking for Master/RA/Interns, who are interested in medical image analysis and computer vision. Please feel free to drop me an email with your CV.</font></p>
+<li><p><font color="red">Currently, I am looking for Master/RA/Interns, who are interested in medical image analysis and computer vision. Please feel free to drop me an email with your CV.</font></p>
 </li>
 <li><p>[04/2021] One paper "HF-UNet: Learning Hierarchically Inter-Task Relevance in Multi-Task U-Net for Accurate Prostate Segmentation in CT images" was accepted at <b>IEEE TMI </b>.</p>
 </li>
@@ -45,8 +45,6 @@ I received my Ph.D. degree in the Department of Computer Science and Technology 
 
 <h2>
   Publications 
-    (<a href="index.html" id="select0" onclick="showPubs(0); return false;" style="text-decoration: underline; color: rgb(0, 0, 0);">show selected</a> / 
-    <a href="fullPub.html" onclick="showPubs(1); return false;" style="">show all</a>)
 </h2>
 
 <table>
