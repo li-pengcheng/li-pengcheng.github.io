@@ -19,18 +19,17 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 <li><p>[10/2020] One paper "TSASNet: Tooth segmentation on dental panoramic X-ray images by Two-Stage Attention Segmentation Network" was accepted at <b>Knowledge-Based Systems</b>.</p>
 </li>
 </ul>
-
-
-
 <h2>Research Interests</h2>
 <ul>
 <li>Medical Image Analysis</li>
 <li>Computer Vision</li>
 <li>Machine Learning</li>
 </ul>
+
 <h2>
   Publications 
 </h2>
+
 <table>
 <tbody><tr>
 <td><img src="figures\TSASNet.png" width="300" height="120"></td>
