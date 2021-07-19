@@ -144,12 +144,3 @@ I received my Ph.D. degree in the Department of Computer Science and Technology 
 </ul></td>
 </tr>
 </tbody></table>
-
-<div id="footer">
-<div id="footer-text">
-</div>
-</div>
-</div>
-
-
-</body></html>
