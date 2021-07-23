@@ -14,7 +14,7 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 
 <h2>News</h2>
 <ul>
-<li><p><font color="red">Hoping for the good luck.</font></p>
+<li><p><font color="red">To be continue...</font></p>
 </li>
 <li><p>[10/2020] One paper "TSASNet: Tooth segmentation on dental panoramic X-ray images by Two-Stage Attention Segmentation Network" was accepted at <b>Knowledge-Based Systems</b>.</p>
 </li>
@@ -57,6 +57,5 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 </ul></td>
 </tr>
 </tbody></table>
-
 
 
