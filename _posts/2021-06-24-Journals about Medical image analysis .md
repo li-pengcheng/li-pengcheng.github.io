@@ -35,6 +35,10 @@ key: a-2021-06-24
 * Journal of Personalized Medicine
   * 二区  
   * IF: 4.433(2019)
+* [IEEE/ACM Transactions on Computational Biology and Bioinformatics](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8857)
+  * 三区
+  * IF：3.71
+  * 年文章数（~200）
 
 
 
