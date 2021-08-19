@@ -1,7 +1,7 @@
 ---
 
 permalink: /
-title: "Pengcheng Li's Homepage"
+title: "Brief Introduction"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
