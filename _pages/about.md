@@ -36,7 +36,7 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 <td><ul>
 <li><p>
 	TSASNet: Tooth segmentation on dental panoramic X-ray images by Two-Stage Attention Segmentation Network
-	<br> Yue Zhao*, <b>Pengcheng Li</b>, Chenqiang Gao, Yang Liu, Qiaoyi Chen, Feng Yang, Deyu Meng.<br> 
+	<br> Yue Zhao*, <b>Pengcheng Li*</b>, Chenqiang Gao, Yang Liu, Qiaoyi Chen, Feng Yang, Deyu Meng.(共同一作)<br> 
 	<i>Knowledge-Based Systems(IF: 8.038), DOI: 10.1016/j.knosys.2020.106338.</i><br>
 	[<a href="https://www.sciencedirect.com/science/article/abs/pii/S0950705120304950">Paper</a>]
     </p>
