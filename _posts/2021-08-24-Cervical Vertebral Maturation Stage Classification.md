@@ -41,7 +41,7 @@ tags:
 * 加载预训练模型，fine tune 最后的分类层+模型集成
 * 分类结果的混淆矩阵
 
-![](/figures/cvm_roc.png)
+![](/figures/CVM_ROC.png)
 
 # Method2
 
