@@ -1,5 +1,5 @@
 ---
-title: Contrastive Learning of Relative Position Regression for One-Shot Object Localization in 3D Medical Images
+ title: Contrastive Learning of Relative Position Regression for One-Shot Object Localization in 3D Medical Images
 key: a-2021-10-13
 typora-root-url: ..
 tags:
@@ -23,6 +23,10 @@ tags:
 # Method
 
 ![](/figures/PNet.png)
+
+* 上述方式可以用于计算任意两个patch之间的距离。
+
+
 
 * 整体网络结构
 
