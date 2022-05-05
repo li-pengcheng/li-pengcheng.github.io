@@ -55,18 +55,17 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 	[<a href="https://link.springer.com/article/10.1007/s00521-021-05790-5">Paper</a>]
     </p>
 </li>
-        <h4>
-            <br>
-		<p><center>
-            <div id="clustrmaps-widget" style="width:40%">
-      		<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=-1QcsXHGd_Zy5t3s8oV6og0khfHzqlc4gIdK38ek7mw'></script>
-		    <br>
-                <b>&copy;Pengcheng Li.</b>&nbsp Last update: May, 2022.
-			</div>
-			</center></p>
-        </h4>
 </ul></td>
 </tr>
 </tbody></table>
 
+<h2>
+    <br>
+	<p><center>
+        <div id="clustrmaps-widget" style="width:80%">
+      	<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=-1QcsXHGd_Zy5t3s8oV6og0khfHzqlc4gIdK38ek7mw'></script>
+    <br>
 
+	</div>
+	</center></p>
+ </h2>
