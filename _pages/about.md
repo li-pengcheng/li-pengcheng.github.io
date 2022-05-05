@@ -39,7 +39,7 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 	<br> Yue Zhao*, <b>Pengcheng Li*</b>, Chenqiang Gao, Yang Liu, Qiaoyi Chen, Feng Yang, Deyu Meng.(共同一作)<br> 
 	<i>Knowledge-Based Systems(IF: 8.038), DOI: 10.1016/j.knosys.2020.106338.</i><br>
 	[<a href="https://www.sciencedirect.com/science/article/abs/pii/S0950705120304950">Paper</a>]
-    </p>
+	</p>
 </li>
 </ul></td>
 </tr>
@@ -53,19 +53,19 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 	<br>Qiaoyi Chen, Yue Zhao*, Yang Liu, Yongqing Sun, Chongshi Yang, <b>Pengcheng Li</b>, Lingming Zhang, Chenqiang Gao.<br> 
 	<i>Neural Computing and Applications (IF: 5.606), DOI: 10.1007/s00521-021-05790-5.</i><br>
 	[<a href="https://link.springer.com/article/10.1007/s00521-021-05790-5">Paper</a>]
-    </p>
+	</p>
 </li>
 </ul></td>
 </tr>
 </tbody></table>
 
 <h2>
-    <br>
+	<br>
 	<p><center>
-        <div id="clustrmaps-widget" style="width:80%">
-      	<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=-1QcsXHGd_Zy5t3s8oV6og0khfHzqlc4gIdK38ek7mw'></script>
-    <br>
-
+		<div id="clustrmaps-widget" style="width:80%">
+		<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=-1QcsXHGd_Zy5t3s8oV6og0khfHzqlc4gIdK38ek7mw'></script>
+	<br>
+	<b>&copy;Pengcheng Li</b>
 	</div>
 	</center></p>
  </h2>
