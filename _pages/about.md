@@ -1,7 +1,7 @@
 ---
 
 permalink: /
-title: "Brief Introduction"
+title: "Pengcheng's Home Page"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -16,6 +16,7 @@ Greeting! My name is Pengcheng Li(李鹏程). I received my Master degree from C
 <ul>
 <li><p><font color="red">To be continue...</font></p>
 </li>
+<li><p>[05/2022] One paper "Semantic Graph Attention with Explicit Anatomical Association Modeling for Tooth Segmentation from CBCT Images" was accepted at <b>IEEE-TMI</b>.</p>
 <li><p>[10/2020] One paper "TSASNet: Tooth segmentation on dental panoramic X-ray images by Two-Stage Attention Segmentation Network" was accepted at <b>Knowledge-Based Systems</b>.</p>
 </li>
 </ul>
