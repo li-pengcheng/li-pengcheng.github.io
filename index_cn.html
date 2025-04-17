@@ -1,25 +1,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" slick-uniqueid="3">
 <head>
     <!--meta data-->
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="keywords" content="Pengcheng Li - Homepage">
     <meta name="description" content="Pengcheng Li's Homepage">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式设计 -->
+    
     <link rel="stylesheet" href="./css/jemdoc.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" />
 
     <style type="text/css">
-	</style>
+        /* 优化导航栏 */
+        nav a {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #f0f0f0;
+            color: #007BFF;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            #home td {
+                display: block;
+                width: 100%;
+            }
+            #photo {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+        
+        /* 文本段落优化 */
+        p {
+            line-height: 1.8;
+        }
+
+        /* 学术新闻和论文成果部分的样式 */
+        .news-container .scrollable-content {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        /* 社会服务部分卡片样式 */
+        .service-card {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+
     <title>Pengcheng Li - Homepage</title>
-	<link rel="shortcut icon" href="./people/lpc/icon/favicon.ico">
+    <link rel="shortcut icon" href="./people/lpc/icon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./people/lpc/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./people/lpc/icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./people/lpc/icon/favicon-16x16.png">
     <link rel="manifest" href="./people/lpc/icon/manifest.json">
     <link rel="mask-icon" href="./people/lpc/icon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
-
 
     <script src="./scripts/scroll.js"></script>
 </head>
@@ -30,15 +70,15 @@
         <nav>
             <div>
                 <ul>
-					<li><a href="index.html">英文主页</a></li>
-					<li><a onclick="scrollToSection('个人简介')" style="cursor: pointer;">个人简介</a></li>
-					<li><a onclick="scrollToSection('学术新闻')" style="cursor: pointer;">学术新闻</a></li>
-					<li><a onclick="scrollToSection('论文成果')" style="cursor: pointer;">论文成果</a></li>
-					<li><a onclick="scrollToSection('科研项目')" style="cursor: pointer;">科研项目</a></li>
-					<li><a onclick="scrollToSection('课程教学')" style="cursor: pointer;">课程教学</a></li>
-					<li><a onclick="scrollToSection('社会服务')" style="cursor: pointer;">社会服务</a></li>
-					<li><a href="index_cn.html" style="cursor: pointer;">中文介绍</a></li>
-                    
+                    <li><a href="index.html">英文主页</a></li>
+                    <li><a onclick="scrollToSection('个人简介')" style="cursor: pointer;">个人简介</a></li>
+					<li><a onclick="scrollToSection('个人简介')" style="cursor: pointer;"><a href="join_us.html" style="cursor: pointer;">招生说明</a></li>
+                    <li><a onclick="scrollToSection('学术新闻')" style="cursor: pointer;">学术新闻</a></li>
+                    <li><a onclick="scrollToSection('论文成果')" style="cursor: pointer;">论文成果</a></li>
+                    <li><a onclick="scrollToSection('科研项目')" style="cursor: pointer;">科研项目</a></li>
+                    <li><a onclick="scrollToSection('课程教学')" style="cursor: pointer;">课程教学</a></li>
+                    <li><a onclick="scrollToSection('社会服务')" style="cursor: pointer;">社会服务</a></li>
+
                 </ul>
             </div>
         </nav>
@@ -46,12 +86,12 @@
 
     <!-- Overall layout control -->
     <div id="layout-content" style="margin-top: 25px">
-        <!-- Figure, Name, Addree, Email, CV, etc. -->
-		<table id="home" class="home">
+        <!-- Figure, Name, Address, Email, CV, etc. -->
+        <table id="home" class="home">
             <tbody>
                 <tr>
                     <td width="19%" valign="top" height="173">
-                        <img height="300" id="photo" style="padding: 10pt 30pt 0pt 10pt; float: left; display: inline;" src="./people/lpc/avatar.jpg">
+                        <img height="300" id="photo" style="padding: 10pt 30pt 0pt 10pt; float: left; display: inline;" src="./people/lpc/avatar.jpg" alt="Pengcheng Li">
                     </td>
 
                     <td width="80%" valign="top" height="173">
@@ -63,7 +103,7 @@
                         </p>
                         <p>
                             <a href="https://cs.hainanu.edu.cn/" target="_blank">计算机与科学技术学院</a><br>
-							<a href="https://www.hainanu.edu.cn/" target="_blank">海南大学</a><br>
+                            <a href="https://www.hainanu.edu.cn/" target="_blank">海南大学</a><br>
                             <br>
                             <br>
                             <strong>办公室:</strong><br>
@@ -71,10 +111,10 @@
                             <br>
                             <br>
                             <strong>办公邮箱:</strong> 
-							<br>
-							lipengcheng@hainanu.edu.cn<br>
                             <br>
-                            <a href="https://scholar.google.com/citations?user=1q02xOYAAAAJ&hl=zh-CN" target="_blank">[Google Scholar]</a> &nbsp&nbsp <a href="https://github.com/li-pengcheng" target="_blank">[GitHub]</a>
+                            lipengcheng@hainanu.edu.cn<br>
+                            <br>
+                            <a href="https://scholar.google.com/citations?user=1q02xOYAAAAJ&hl=zh-CN" target="_blank">[Google Scholar]</a> &nbsp;&nbsp;<a href="https://github.com/li-pengcheng" target="_blank">[GitHub]</a>
                         </p>
                     </td>
                 </tr>
@@ -84,12 +124,10 @@
         <!-- Biography -->
         <h2 id="个人简介">个人简介</h2>
         <p style="text-align: justify; line-height: 1.5;">
-			我2024年12月博士毕业于重庆邮电大学，导师是中山大学智能工程学院<a href="https://gaocq.github.io" target="_blank">高陈强</a>教授。2025年2月到海南大学计算机科学与技术学院任副研究员。
-			<br>
-			我的主要研究方向是<strong>多模态医学图像分析</strong>及其在口腔领域的应用，研究兴趣包括但不限于二维、三维图像视频检测、分割，点云分析。 
+			我2024年12月博士毕业于重庆邮电大学，导师是中山大学智能工程学院<a href="https://gaocq.github.io" target="_blank">高陈强</a>教授。2025年2月入职海南大学计算机科学与技术学院担任副研究员，主要研究方向是<strong>多模态医学图像分析</strong>，当前聚焦于口腔领域的应用，研究兴趣包括但不限于机器学习、计算机视觉以及生物医学图像分析。 
         </p>
         <p style="text-align: justify; line-height: 1.5;">
-            <strong style="color:red; font-size:120%;">招生说明</strong>：如果你想报考我的研究生，请仔细查看我的<a href="join_us.html" target="_blank">招生说明</a>，如果你觉得合适，欢迎给我发邮件。 <br>
+            <strong style="color:red; font-size:120%;">招生说明</strong>：欢迎对计算机视觉和智能医学图像分析感兴趣的同学加入我的课题组，如果你想报考我的研究生，请仔细查看我的<a href="join_us.html" target="_blank">招生说明</a>。 <br>
 
         </p>
 
@@ -101,7 +139,7 @@
                 <span class="dot">&#8226;</span> 05/30, 2024: <strong>1</strong>篇论文被<strong>IEEE-TMI</strong>顺利接收。<br>
                 <span class="dot">&#8226;</span> 12/20, 2023: <strong>1</strong>篇论文被<strong>IEEE-TCSVT</strong>顺利接收。<br>
                 <span class="dot">&#8226;</span> 05/31, 2022: <strong>1</strong>篇论文被<strong>IEEE-TMI</strong>顺利接收。<br>
-                <span class="dot">&#8226;</span> 10/10, 2020: <strong>1</strong>篇论文被<strong>Knowledge-Based Systems</strong>顺利接收。 <br>
+                <span class="dot">&#8226;</span> 10/10, 2020: <strong>1</strong>篇论文被<strong>Knowledge-Based Systems</strong>顺利接收。<br>
             </div>
         </div>
 
@@ -200,47 +238,33 @@
 
             </tbody>
         </table>
-
-        <!-- 科研项目 -->
-        <h2 id="科研项目">科研项目</h2>
-		<table id="tbTeaching" border="0" width="100%">
-		    <tbody>
-		        <tr>
-		           <td>
-		               <span>&#8226;</span><span style="padding-left: 1em;">国家自然科学基金面上项目，62176035，红外与可见光双模复原与融合方法及应用研究，在研，参与。</span>
-		           </td>
-		        </tr>
-		    </tbody>
-		</table>
 		
-		
+		<!-- 科研项目 -->
+		<h2 id="科研项目">科研项目</h2>
+		<div class="news-container">
+		    <div class="scrollable-content">
+		        <span class="dot">&#8226;</span> 海南大学高层次人才科研启动项目，40万元，在研，主持。<br>
+		        <span class="dot">&#8226;</span> 国家自然科学基金面上项目，红外与可见光双模复原与融合方法及应用研究，在研，参与。<br>
+		        <span class="dot">&#8226;</span> 重庆邮电大学博士生创新人才项目，3万元，结题，主持。<br>
+		    </div>
+		</div>
 
 
         <!-- Teaching -->
         <h2 id="课程教学">课程教学</h2>
-            <table id="课程教学" border="0" width="100%">
-                <tbody>
-                    <tr>
-                        <td>2024-2025(S2)</td>
-                        <td>TBD</td>
-                        <td>TBD</td>
-                    </tr>
-                </tbody>
-            </table>
-
+		<div class="news-container">
+		    <div class="scrollable-content">
+		        <span class="dot">&#8226;</span> 高级程序设计语言<br>
+		        <span class="dot">&#8226;</span> 数字图像处理<br>
+		    </div>
+		</div>
         
         <h2 id="社会服务">社会服务</h2>
-        
-        <!-- Reviewer -->
-        <h3>审稿服务</h3>
-        <table id="tbReviewer" border="0" width="100%">
-            <tbody>
-                <tr>
-                    <td>&nbsp;&nbsp;IEEE Transaction on Medical Imaging (TMI)</td>
-                    <td>2022</td>
-                </tr>
-            </tbody>
-        </table>
+		<div class="news-container">
+		    <div class="scrollable-content">
+		        <span class="dot">&#8226;</span> 担任TMI,TCSVT,CVPR,ICCV等国际期刊会议审稿人<br>
+		    </div>
+		</div>
 
         <h4>
             <br>
