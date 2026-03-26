@@ -18,20 +18,7 @@
             background-color: #f0f0f0;
             color: #007BFF;
         }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            #home td {
-                display: block;
-                width: 100%;
-            }
-            #photo {
-                width: 100%;
-                max-width: 200px;
-                height: auto;
-            }
-        }
-        
+
         /* 文本段落优化 */
         p {
             line-height: 1.8;
@@ -52,64 +39,143 @@
             box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
         }
 
-
         /* ===== 首页三列布局 ===== */
-.profile-container {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    margin-bottom: 30px;
-}
+        .profile-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
 
-/* 左边照片 */
-.profile-left img {
-    width: 220px;
-    border-radius: 8px;
-}
+        /* 左边照片 */
+        .profile-left {
+            flex: 0 0 220px;
+        }
 
-/* 中间信息 */
-.profile-middle {
-    flex: 1;
-}
+        .profile-left img {
+            width: 220px;
+            border-radius: 8px;
+            display: block;
+        }
 
-.profile-middle h1 {
-    margin: 0;
-    font-size: 28px;
-}
+        /* 中间信息 */
+        .profile-middle {
+            flex: 0 0 420px;
+            min-width: 360px;
+        }
 
-.profile-middle h2 {
-    margin: 5px 0 15px 0;
-    font-weight: normal;
-    color: #555;
-}
+        .profile-middle h1 {
+            margin: 0 0 8px 0;
+            font-size: 32px;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: visible;
+        }
 
-.info-block {
-    margin: 15px 0;
-}
+        .profile-middle h2 {
+            margin: 0 0 18px 0;
+            font-size: 22px;
+            font-weight: normal;
+            color: #555;
+        }
 
-/* 右侧内容 */
-.profile-right {
-    flex: 1;
-    background: #f8f9fb;
-    padding: 15px;
-    border-radius: 8px;
-}
+        .profile-middle p {
+            margin: 0 0 14px 0;
+        }
 
-.profile-right h3 {
-    margin-top: 0;
-}
+        .info-block {
+            margin: 24px 0 20px 0;
+        }
 
-/* 响应式 */
-@media (max-width: 768px) {
-    .profile-container {
-        flex-direction: column;
-    }
+        .info-block p {
+            margin-bottom: 18px;
+        }
 
-    .profile-left img {
-        width: 150px;
-    }
-}
+        /* 右侧内容 */
+        .profile-right {
+            flex: 1;
+            min-width: 280px;
+            background: #f8f9fb;
+            padding: 18px 22px;
+            border-radius: 8px;
+        }
 
+        .profile-right h3 {
+            margin: 0 0 16px 0;
+            font-size: 22px;
+        }
+
+        .research-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .research-list li {
+            margin-bottom: 10px;
+            white-space: nowrap;
+            line-height: 1.8;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .profile-container {
+                gap: 24px;
+            }
+
+            .profile-middle {
+                flex: 1;
+                min-width: 300px;
+            }
+
+            .profile-right {
+                min-width: 240px;
+            }
+
+            .research-list li {
+                white-space: normal;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #photo {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+            }
+
+            .profile-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .profile-left {
+                flex: none;
+            }
+
+            .profile-left img {
+                width: 180px;
+            }
+
+            .profile-middle {
+                min-width: auto;
+                width: 100%;
+            }
+
+            .profile-middle h1 {
+                font-size: 28px;
+                white-space: normal;
+            }
+
+            .profile-right {
+                width: 100%;
+                min-width: auto;
+            }
+
+            .research-list li {
+                white-space: normal;
+            }
+        }
     </style>
 
     <title>Pengcheng Li - Homepage</title>
@@ -145,55 +211,48 @@
 
     <!-- Overall layout control -->
     <div id="layout-content" style="margin-top: 25px">
-        <!-- Figure, Name, Address, Email, CV, etc. -->
         <!-- Header Section -->
-<div class="profile-container">
+        <div class="profile-container">
 
-    <!-- 左：照片 -->
-    <div class="profile-left">
-        <img id="photo" src="./people/lpc/avatar.jpg" alt="Pengcheng Li">
-    </div>
+            <!-- 左：照片 -->
+            <div class="profile-left">
+                <img id="photo" src="./people/lpc/avatar.jpg" alt="Pengcheng Li">
+            </div>
 
-    <!-- 中：基本信息 -->
-    <div class="profile-middle">
-        <h1>李鹏程</h1>
-        <h2>副教授</h2>
+            <!-- 中：基本信息 -->
+            <div class="profile-middle">
+                <h1>李鹏程</h1>
+                <h2>副教授</h2>
 
-        <p>
-            <a href="https://cs.hainanu.edu.cn/" target="_blank">计算机科学与技术学院</a><br>
-            <a href="https://www.hainanu.edu.cn/" target="_blank">海南大学</a>
-        </p>
+                <p>
+                    <a href="https://cs.hainanu.edu.cn/" target="_blank">计算机科学与技术学院</a><br>
+                    <a href="https://www.hainanu.edu.cn/" target="_blank">海南大学</a>
+                </p>
 
-        <div class="info-block">
-            <p><strong>办公室：</strong><br>海甸校区农科主楼1116</p>
-            <p><strong>邮箱：</strong><br>lipengcheng@hainanu.edu.cn</p>
+                <div class="info-block">
+                    <p><strong>办公室：</strong><br>海甸校区农科主楼1116</p>
+                    <p><strong>邮箱：</strong><br>lipengcheng@hainanu.edu.cn</p>
+                </div>
+
+                <p>
+                    <a href="https://scholar.google.com/citations?user=1q02xOYAAAAJ&hl=zh-CN" target="_blank">[Google Scholar]</a>
+                    &nbsp;&nbsp;
+                    <a href="https://github.com/li-pengcheng" target="_blank">[GitHub]</a>
+                </p>
+            </div>
+
+            <!-- 右：研究兴趣 -->
+            <div class="profile-right">
+                <h3>研究兴趣</h3>
+                <ul class="research-list">
+                    <li>多模态医学图像分析</li>
+                    <li>口腔影像理解</li>
+                    <li>计算机视觉</li>
+                    <li>机器学习</li>
+                </ul>
+            </div>
+
         </div>
-
-        <p>
-            <a href="https://scholar.google.com/citations?user=1q02xOYAAAAJ&hl=zh-CN" target="_blank">[Google Scholar]</a>
-            &nbsp;&nbsp;
-            <a href="https://github.com/li-pengcheng" target="_blank">[GitHub]</a>
-        </p>
-    </div>
-
-    <!-- 右：简介/研究兴趣 -->
-    <div class="profile-right">
-        <h3>Research Interests</h3>
-        <ul>
-            <li>多模态医学图像分析</li>
-            <li>口腔CBCT影像理解</li>
-            <li>计算机视觉</li>
-            <li>机器学习</li>
-        </ul>
-
-        <h3>About</h3>
-        <p>
-            主要从事口腔智能医学图像分析与计算机视觉方法研究，围绕牙齿结构建模、空间关系表征及分割识别开展系统研究。
-        </p>
-    </div>
-
-</div>
-
 
         <!-- Biography -->
         <h2 id="个人简介">个人简介</h2>
@@ -202,7 +261,7 @@
         </p>
 
         <p style="text-align: justify;">
-            目前主持国家级及省部级科研项目2项，现为中国计算机学会人工智能与模式识别、计算机视觉及生物信息学专委会委员。研究兴趣包括多模态医学图像分析、口腔CBCT影像理解、计算机视觉及机器学习等方向。
+            目前主持国家级及省部级科研项目2项，现为中国计算机学会人工智能与模式识别、计算机视觉及生物信息学专委会委员。研究兴趣包括多模态医学图像分析、口腔影像理解、计算机视觉及机器学习等方向。
         </p>
 
         <!-- News -->
@@ -343,7 +402,7 @@
 
         <h4>
             <br>
-            <div align="left">
+            <div align="center">
                 <b>&copy;李鹏程</b>&nbsp;<br>
                 <a href="https://clustrmaps.com/site/1bo8h" title="Visit tracker">
                     <img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=300&t=tt&d=-1QcsXHGd_Zy5t3s8oV6og0khfHzqlc4gIdK38ek7mw&co=2d78ad&ct=ffffff" alt="Visit tracker">
