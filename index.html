@@ -51,6 +51,65 @@
             border-radius: 8px;
             box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
         }
+
+
+        /* ===== 首页三列布局 ===== */
+.profile-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+/* 左边照片 */
+.profile-left img {
+    width: 220px;
+    border-radius: 8px;
+}
+
+/* 中间信息 */
+.profile-middle {
+    flex: 1;
+}
+
+.profile-middle h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.profile-middle h2 {
+    margin: 5px 0 15px 0;
+    font-weight: normal;
+    color: #555;
+}
+
+.info-block {
+    margin: 15px 0;
+}
+
+/* 右侧内容 */
+.profile-right {
+    flex: 1;
+    background: #f8f9fb;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.profile-right h3 {
+    margin-top: 0;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-left img {
+        width: 150px;
+    }
+}
+
     </style>
 
     <title>Pengcheng Li - Homepage</title>
@@ -87,39 +146,54 @@
     <!-- Overall layout control -->
     <div id="layout-content" style="margin-top: 25px">
         <!-- Figure, Name, Address, Email, CV, etc. -->
-        <table id="home" class="home">
-            <tbody>
-                <tr>
-                    <td width="19%" valign="top" height="173">
-                        <img height="300" id="photo" style="padding: 10pt 30pt 0pt 10pt; float: left; display: inline;" src="./people/lpc/avatar.jpg" alt="Pengcheng Li">
-                    </td>
+        <!-- Header Section -->
+<div class="profile-container">
 
-                    <td width="80%" valign="top" height="173">
-                        <b><font face="Verdana" size="5">李鹏程</font></b>
-                        <br>
-                        <br>
-                        <p>
-                            <b><font size="5">副教授</font></b>
-                        </p>
-                        <p>
-                            <a href="https://cs.hainanu.edu.cn/" target="_blank">计算机科学与技术学院</a><br>
-                            <a href="https://www.hainanu.edu.cn/" target="_blank">海南大学</a><br>
-                            <br>
-                            <br>
-                            <strong>办公室:</strong><br>
-                            海甸校区农科主楼1116
-                            <br>
-                            <br>
-                            <strong>办公邮箱:</strong>
-                            <br>
-                            lipengcheng@hainanu.edu.cn<br>
-                            <br>
-                            <a href="https://scholar.google.com/citations?user=1q02xOYAAAAJ&hl=zh-CN" target="_blank">[Google Scholar]</a> &nbsp;&nbsp;<a href="https://github.com/li-pengcheng" target="_blank">[GitHub]</a>
-                        </p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- 左：照片 -->
+    <div class="profile-left">
+        <img id="photo" src="./people/lpc/avatar.jpg" alt="Pengcheng Li">
+    </div>
+
+    <!-- 中：基本信息 -->
+    <div class="profile-middle">
+        <h1>李鹏程</h1>
+        <h2>副教授</h2>
+
+        <p>
+            <a href="https://cs.hainanu.edu.cn/" target="_blank">计算机科学与技术学院</a><br>
+            <a href="https://www.hainanu.edu.cn/" target="_blank">海南大学</a>
+        </p>
+
+        <div class="info-block">
+            <p><strong>办公室：</strong><br>海甸校区农科主楼1116</p>
+            <p><strong>邮箱：</strong><br>lipengcheng@hainanu.edu.cn</p>
+        </div>
+
+        <p>
+            <a href="https://scholar.google.com/citations?user=1q02xOYAAAAJ&hl=zh-CN" target="_blank">[Google Scholar]</a>
+            &nbsp;&nbsp;
+            <a href="https://github.com/li-pengcheng" target="_blank">[GitHub]</a>
+        </p>
+    </div>
+
+    <!-- 右：简介/研究兴趣 -->
+    <div class="profile-right">
+        <h3>Research Interests</h3>
+        <ul>
+            <li>多模态医学图像分析</li>
+            <li>口腔CBCT影像理解</li>
+            <li>计算机视觉</li>
+            <li>机器学习</li>
+        </ul>
+
+        <h3>About</h3>
+        <p>
+            主要从事口腔智能医学图像分析与计算机视觉方法研究，围绕牙齿结构建模、空间关系表征及分割识别开展系统研究。
+        </p>
+    </div>
+
+</div>
+
 
         <!-- Biography -->
         <h2 id="个人简介">个人简介</h2>
