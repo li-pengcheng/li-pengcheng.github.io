@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -24,7 +25,7 @@ body {
     color: #000;
 }
 
-/* 正文更紧凑一点 */
+/* ===== 正文 ===== */
 p {
     line-height: 1.6;
     margin: 8px 0;
@@ -100,29 +101,24 @@ h2 {
     margin-bottom: 12px;
 }
 
-/* ===== 核心：列表样式优化 ===== */
-
-/* 包含 dot 的段落统一样式 */
+/* ===== 修复列表换行错位（不改HTML内容） ===== */
+/* 只对包含 dot 的段落生效，不影响普通正文段落 */
 p:has(.dot) {
+    text-indent: -1.6em;
+    padding-left: 2em;
     margin: 6px 0;
 }
 
-/* 小圆点（缩进 + 对齐关键） */
+/* 小圆点宽度与缩进 */
 .dot {
     display: inline-block;
-    width: 1.5em;
-    margin-left: 1.5em;
+    width: 1.6em;
     vertical-align: top;
 }
 
-/* 让文字块对齐（关键） */
-.dot + br {
-    display: none;
-}
-
-/* 优化多行文本视觉 */
-.dot::before {
-    content: '';
+/* 让每项之间的视觉间距更自然 */
+p:has(.dot) br {
+    line-height: 1.6;
 }
 
 /* ===== 防止锚点被导航遮挡 ===== */
@@ -172,33 +168,8 @@ p:has(.dot) {
         justify-content: flex-start;
     }
 }
-/* ===== 修复列表换行错位（不改HTML） ===== */
 
-/* 整个段落做“悬挂缩进” */
-p {
-    text-indent: -1.5em;
-    padding-left: 1.8em;
-}
-
-/* 圆点位置 */
-.dot {
-    display: inline-block;
-    width: 1.5em;
-}
-
-/* 每一条之间更紧凑 */
-p br {
-    line-height: 1.6;
-}
-
-/* 只影响带 dot 的段落（更安全） */
-p:has(.dot) {
-    margin: 6px 0;
-}
-
-        
-</style>
-
+    </style>
 
     <title>李鹏程 - 招生说明</title>
     <link rel="shortcut icon" href="./people/lpc/icon/favicon.ico">
