@@ -1,184 +1,171 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN">
 <head>
-    <!--meta data-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="Pengcheng Li - Homepage">
-    <meta name="description" content="Pengcheng Li's Homepage">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式设计 -->
-    
+    <meta name="keywords" content="李鹏程, 个人主页, 海南大学, 口腔医学图像分析, CBCT, 计算机视觉, 机器学习">
+    <meta name="description" content="李鹏程个人主页">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./css/jemdoc.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" />
 
     <style type="text/css">
-        /* 优化导航栏 */
-        nav a {
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #f0f0f0;
-            color: #007BFF;
-        }
 
-        /* 文本段落优化 */
-        p {
-            line-height: 1.8;
-        }
+/* ===== 全局基础 ===== */
+body {
+    margin: 0;
+    padding: 0;
+}
 
-        /* 学术新闻和论文成果部分的样式 */
-        .news-container .scrollable-content {
-            max-height: 300px;
-            overflow-y: auto;
-        }
+p {
+    line-height: 1.8;
+}
 
-        /* 社会服务部分卡片样式 */
-        .service-card {
-            border: 1px solid #ccc;
-            margin: 10px;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-        }
+/* ===== 导航栏优化 ===== */
+nav a {
+    transition: background-color 0.3s, color 0.3s;
+}
 
-        /* ===== 首页三列布局 ===== */
-        .profile-container {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-            margin-bottom: 30px;
-        }
+nav a:hover {
+    background-color: #f0f0f0;
+    color: #007BFF;
+}
 
-        /* 左边照片 */
-        .profile-left {
-            flex: 0 0 220px;
-        }
+/* 防止跳转被导航栏遮挡 */
+#home,
+#个人简介,
+#学术新闻,
+#论文成果,
+#科研项目,
+#课程教学,
+#社会服务 {
+    scroll-margin-top: 80px;
+}
 
-        .profile-left img {
-            width: 220px;
-            border-radius: 8px;
-            display: block;
-        }
+/* ===== 顶部首屏布局（核心） ===== */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
 
-        /* 中间信息 */
-        .profile-middle {
-            flex: 0 0 420px;
-            min-width: 360px;
-        }
+/* 左：照片 */
+.profile-left {
+    flex: 0 0 auto;
+}
 
-        .profile-middle h1 {
-            margin: 0 0 8px 0;
-            font-size: 32px;
-            line-height: 1.2;
-            white-space: nowrap;
-            overflow: visible;
-        }
+.profile-left img {
+    width: 260px;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
 
-        .profile-middle h2 {
-            margin: 0 0 18px 0;
-            font-size: 22px;
-            font-weight: normal;
-            color: #555;
-        }
+/* 右：信息（参考学术主页风格） */
+.profile-middle-centered {
+    flex: 1;
+}
 
-        .profile-middle p {
-            margin: 0 0 14px 0;
-        }
+/* 姓名 */
+.profile-middle-centered h1 {
+    margin: 0 0 10px 0;
+    font-size: 34px;
+    color: #000;
+    white-space: nowrap;
+}
 
-        .info-block {
-            margin: 24px 0 20px 0;
-        }
+/* 职称 */
+.profile-middle-centered h2 {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    font-weight: normal;
+    color: #555;
+}
 
-        .info-block p {
-            margin-bottom: 18px;
-        }
+/* 信息段落 */
+.profile-middle-centered p {
+    margin-bottom: 14px;
+    line-height: 1.8;
+}
 
-        /* 右侧内容 */
-        .profile-right {
-            flex: 1;
-            min-width: 280px;
-            background: #f8f9fb;
-            padding: 18px 22px;
-            border-radius: 8px;
-        }
+/* 链接 */
+.profile-middle-centered a {
+    text-decoration: none;
+}
 
-        .profile-right h3 {
-            margin: 0 0 16px 0;
-            font-size: 22px;
-        }
+/* ===== 学术新闻滚动 ===== */
+.news-container .scrollable-content {
+    max-height: 300px;
+    overflow-y: auto;
+}
 
-        .research-list {
-            list-style: none;
-            padding-left: 0;
-            margin: 0;
-        }
+/* ===== 社会服务卡片（保留兼容） ===== */
+.service-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
 
-        .research-list li {
-            margin-bottom: 10px;
-            white-space: nowrap;
-            line-height: 1.8;
-        }
+/* ===== 论文图片优化 ===== */
+.pub-cover {
+    width: 280px;
+    height: auto;
+}
 
-        /* 响应式设计 */
-        @media (max-width: 1024px) {
-            .profile-container {
-                gap: 24px;
-            }
+/* ===== 页脚图片 ===== */
+.footer-box img {
+    max-width: 300px;
+    height: auto;
+}
 
-            .profile-middle {
-                flex: 1;
-                min-width: 300px;
-            }
+/* ===== 响应式设计 ===== */
+@media (max-width: 1024px) {
 
-            .profile-right {
-                min-width: 240px;
-            }
+    .profile-container {
+        gap: 30px;
+    }
 
-            .research-list li {
-                white-space: normal;
-            }
-        }
+    .profile-left img {
+        width: 220px;
+    }
 
-        @media (max-width: 768px) {
-            #photo {
-                width: 100%;
-                max-width: 200px;
-                height: auto;
-            }
+    .profile-middle-centered h1 {
+        font-size: 30px;
+    }
+}
 
-            .profile-container {
-                flex-direction: column;
-                gap: 20px;
-            }
+@media (max-width: 768px) {
 
-            .profile-left {
-                flex: none;
-            }
+    .profile-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
 
-            .profile-left img {
-                width: 180px;
-            }
+    .profile-left img {
+        width: 180px;
+    }
 
-            .profile-middle {
-                min-width: auto;
-                width: 100%;
-            }
+    .profile-middle-centered {
+        width: 100%;
+    }
 
-            .profile-middle h1 {
-                font-size: 28px;
-                white-space: normal;
-            }
+    .profile-middle-centered h1 {
+        font-size: 26px;
+        white-space: normal;
+    }
 
-            .profile-right {
-                width: 100%;
-                min-width: auto;
-            }
+    .profile-middle-centered h2 {
+        font-size: 20px;
+    }
+}
 
-            .research-list li {
-                white-space: normal;
-            }
-        }
-    </style>
+</style>
 
-    <title>Pengcheng Li - Homepage</title>
+
+    <title>李鹏程 - 个人主页</title>
     <link rel="shortcut icon" href="./people/lpc/icon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./people/lpc/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./people/lpc/icon/favicon-32x32.png">
@@ -196,182 +183,172 @@
         <nav>
             <div>
                 <ul>
-                    <li><a href="index_en.html">英文主页</a></li>
+                    <li><a onclick="scrollToSection('home')" style="cursor: pointer;">首页</a></li>
                     <li><a onclick="scrollToSection('个人简介')" style="cursor: pointer;">个人简介</a></li>
-                    <li><a href="join_us.html" style="cursor: pointer;">招生说明</a></li>
                     <li><a onclick="scrollToSection('学术新闻')" style="cursor: pointer;">学术新闻</a></li>
                     <li><a onclick="scrollToSection('论文成果')" style="cursor: pointer;">论文成果</a></li>
                     <li><a onclick="scrollToSection('科研项目')" style="cursor: pointer;">科研项目</a></li>
                     <li><a onclick="scrollToSection('课程教学')" style="cursor: pointer;">课程教学</a></li>
                     <li><a onclick="scrollToSection('社会服务')" style="cursor: pointer;">社会服务</a></li>
+                    <li><a href="join_us.html">招生说明</a></li>
+                    <li><a href="index_en.html">英文主页</a></li>
                 </ul>
             </div>
         </nav>
     </div>
 
-    <!-- Overall layout control -->
-    <div id="layout-content" style="margin-top: 25px">
-        <!-- Header Section -->
-        <div class="profile-container">
+    <div id="layout-content">
+        <!-- Header -->
+        <div class="profile-container" id="home">
 
-            <!-- 左：照片 -->
-            <div class="profile-left">
-                <img id="photo" src="./people/lpc/avatar.jpg" alt="Pengcheng Li">
-            </div>
+    <!-- 左：照片 -->
+    <div class="profile-left">
+        <img id="photo" src="./people/lpc/avatar.jpg" alt="李鹏程">
+    </div>
 
-            <!-- 中：基本信息 -->
-            <div class="profile-middle">
-                <h1>李鹏程</h1>
-                <h2>副教授</h2>
+    <!-- 右：信息 -->
+    <div class="profile-middle-centered">
+        <h1>李鹏程</h1>
+        <h2>副教授</h2>
 
-                <p>
-                    <a href="https://cs.hainanu.edu.cn/" target="_blank">计算机科学与技术学院</a><br>
-                    <a href="https://www.hainanu.edu.cn/" target="_blank">海南大学</a>
-                </p>
+        <p>
+            <a href="https://cs.hainanu.edu.cn/" target="_blank">计算机科学与技术学院</a><br>
+            <a href="https://www.hainanu.edu.cn/" target="_blank">海南大学</a>
+        </p>
 
-                <div class="info-block">
-                    <p><strong>办公室：</strong><br>海甸校区农科主楼1116</p>
-                    <p><strong>邮箱：</strong><br>lipengcheng@hainanu.edu.cn</p>
-                </div>
+        <p>
+            <strong>办公室：</strong>海甸校区农科主楼1116<br>
+            <strong>邮箱：</strong>lipengcheng@hainanu.edu.cn
+        </p>
 
-                <p>
-                    <a href="https://scholar.google.com/citations?user=1q02xOYAAAAJ&hl=zh-CN" target="_blank">[Google Scholar]</a>
-                    &nbsp;&nbsp;
-                    <a href="https://github.com/li-pengcheng" target="_blank">[GitHub]</a>
-                </p>
-            </div>
+        <p>
+            <a href="https://scholar.google.com/citations?user=1q02xOYAAAAJ&hl=zh-CN" target="_blank">[Google Scholar]</a>
+            &nbsp;&nbsp;
+            <a href="https://github.com/li-pengcheng" target="_blank">[GitHub]</a>
+        </p>
+    </div>
 
-            <!-- 右：研究兴趣 -->
-            <div class="profile-right">
-                <h3>研究兴趣</h3>
-                <ul class="research-list">
-                    <li>多模态医学图像分析</li>
-                    <li>口腔影像理解</li>
-                    <li>计算机视觉</li>
-                    <li>机器学习</li>
-                </ul>
-            </div>
+</div>
 
-        </div>
 
         <!-- Biography -->
         <h2 id="个人简介">个人简介</h2>
-        <p style="text-align: justify;">
-            本人现为海南大学计算机科学与技术学院副教授，博士生导师，海南省高层次拔尖人才。长期从事<strong>口腔智能医学图像分析</strong>与计算机视觉方法研究，重点围绕牙齿结构化建模、空间关系表征及分割识别等问题开展研究工作。近年来累计发表学术论文16篇，其中以第一作者身份在国际权威期刊发表论文4篇，包括 <em>IEEE Transactions on Medical Imaging</em>（2篇）、<em>IEEE Transactions on Circuits and Systems for Video Technology</em>（1篇）以及 <em>Knowledge-Based Systems</em>（1篇），并已授权国家发明专利2项。
+
+        <p style="text-align: justify; line-height: 1.6;">
+            本人现为海南大学计算机科学与技术学院副教授、博士生导师，海南省高层次拔尖人才。主要从事<strong>口腔智能医学图像分析</strong>与计算机视觉方法研究，长期围绕牙齿结构化建模、空间关系表征及分割识别等关键问题开展系统性研究工作。
         </p>
 
-        <p style="text-align: justify;">
-            目前主持国家级及省部级科研项目2项，现为中国计算机学会人工智能与模式识别、计算机视觉及生物信息学专委会委员。研究兴趣包括多模态医学图像分析、口腔影像理解、计算机视觉及机器学习等方向。
+        <p style="text-align: justify; line-height: 1.6;">
+            本硕博毕业于重庆邮电大学，师从中山大学智能工程学院<strong><a href="https://gaocq.github.io" target="_blank">高陈强教授</a></strong>。
+        </p>
+
+        <p style="text-align: justify; line-height: 1.6;">
+            近年来累计发表学术论文16篇，其中以第一作者身份在国际权威期刊发表论文4篇，包括 <em>IEEE Transactions on Medical Imaging</em>（2篇）、<em>IEEE Transactions on Circuits and Systems for Video Technology</em>（1篇）以及 <em>Knowledge-Based Systems</em>（1篇），并已授权国家发明专利2项。
+        </p>
+
+        <p style="text-align: justify; line-height: 1.6;">
+            目前主持国家级及省部级科研项目2项，研究方向涵盖多模态医学图像分析、口腔CBCT影像理解、计算机视觉及机器学习等领域。同时担任中国计算机学会人工智能与模式识别、计算机视觉及生物信息学专委会委员，并为TMI、TCSVT、CVPR、ICCV等国际期刊和会议审稿人。
+        </p>
+
+        <p style="text-align: justify; line-height: 1.6;">
+            课题组长期招收对计算机视觉与智能医学影像分析感兴趣的本科生、硕士生及博士生，欢迎具有良好数学基础与编程能力、踏实认真且具备科研兴趣的同学加入。
         </p>
 
         <!-- News -->
         <h2 id="学术新闻">学术新闻</h2>
         <div class="news-container">
             <div class="scrollable-content">
-                <span class="dot">&#8226;</span> 06/11, 2025: <strong>1</strong>篇合作论文被<strong>IEEE-TCSVT</strong>顺利接收，恭喜<strong>接鹏宇</strong>！🎉🎉🎉<br>
-                <span class="dot">&#8226;</span> 02/27, 2025: <strong>1</strong>篇合作论文被<strong>CVPR 2025</strong>顺利接收，恭喜<strong>刘川东</strong>！🎉🎉🎉<br>
-                <span class="dot">&#8226;</span> 05/30, 2024: <strong>1</strong>篇论文被<strong>IEEE-TMI</strong>顺利接收。<br>
-                <span class="dot">&#8226;</span> 12/20, 2023: <strong>1</strong>篇论文被<strong>IEEE-TCSVT</strong>顺利接收。<br>
-                <span class="dot">&#8226;</span> 05/31, 2022: <strong>1</strong>篇论文被<strong>IEEE-TMI</strong>顺利接收。<br>
-                <span class="dot">&#8226;</span> 10/10, 2020: <strong>1</strong>篇论文被<strong>Knowledge-Based Systems</strong>顺利接收。<br>
+                <span class="dot">&#8226;</span> 06/11, 2025：1篇合作论文被<strong>IEEE-TCSVT</strong>顺利接收，恭喜<strong>接鹏宇</strong>！🎉🎉🎉<br>
+                <span class="dot">&#8226;</span> 02/27, 2025：1篇合作论文被<strong>CVPR 2025</strong>顺利接收，恭喜<strong>刘川东</strong>！🎉🎉🎉<br>
+                <span class="dot">&#8226;</span> 05/30, 2024：1篇论文被<strong>IEEE-TMI</strong>顺利接收。<br>
+                <span class="dot">&#8226;</span> 12/20, 2023：1篇论文被<strong>IEEE-TCSVT</strong>顺利接收。<br>
+                <span class="dot">&#8226;</span> 05/31, 2022：1篇论文被<strong>IEEE-TMI</strong>顺利接收。<br>
+                <span class="dot">&#8226;</span> 10/10, 2020：1篇论文被<strong>Knowledge-Based Systems</strong>顺利接收。<br>
             </div>
         </div>
 
-        <!-- Publication -->
+        <!-- Publications -->
         <h2 id="论文成果">论文成果</h2>
-        <p># 通讯作者； * 同等贡献</p>
-        <table border="0" width="100%">
+        <p class="section-note"># 通讯作者；* 同等贡献</p>
+
+        <table border="0" width="100%" class="pub-table">
             <tbody>
-                <!-- Spatial Prior-Guided Bi-Directional Cross-Attention Transformers for Tooth Instance Segmentation -->
                 <tr>
-                    <td>
-                        <br>
-                    </td>
+                    <td><br></td>
                 </tr>
                 <tr>
-                    <td>
+                    <td width="300">
                         <div align="center">
-                            <img width="280" height="150" style="padding: 0pt 10pt 0pt 0pt" src="./projects/SPGTNet/TMI2024-SPGTNet.gif" alt="">
+                            <img class="pub-cover" width="280" height="150" src="./projects/SPGTNet/TMI2024-SPGTNet.gif" alt="">
                         </div>
                     </td>
                     <td>
-                        <font style="line-height: 180%; font-weight: bold">Spatial Prior-Guided Bi-Directional Cross-Attention Transformers for Tooth Instance Segmentation</font>
-                        <br>
-                        <strong>Pengcheng Li</strong>, Chenqiang Gao, Chunfeng Lian, Deyu Meng, Yan Yan. &nbsp; <em>IEEE Transactions on Medical Imaging, 43(11):3936-3948, 2024. (SCI一区Top，IF：8.9)</em><br>
+                        <font style="line-height: 180%; font-weight: bold">Spatial Prior-Guided Bi-Directional Cross-Attention Transformers for Tooth Instance Segmentation</font><br>
+                        <strong>Pengcheng Li</strong>, Chenqiang Gao, Chunfeng Lian, Deyu Meng, Yan Yan.
+                        &nbsp; <em>IEEE Transactions on Medical Imaging, 43(11):3936-3948, 2024. (SCI一区Top，IF：8.9)</em><br>
                         [<a href="https://ieeexplore.ieee.org/document/10539992/" target="_blank">Paper</a>]&nbsp;
                     </td>
                 </tr>
-                
-                <!-- THISNet: Tooth Instance Segmentation on 3D Dental Models via Highlighting Tooth Regions -->
+
                 <tr>
-                    <td>
-                        <br>
-                    </td>
+                    <td><br></td>
                 </tr>
                 <tr>
-                    <td>
+                    <td width="300">
                         <div align="center">
-                            <img width="280" height="200" style="padding: 0pt 10pt 0pt 0pt" src="./projects/THISNet/TCSVT2023-THISNet.gif" alt="">
+                            <img class="pub-cover" width="280" height="200" src="./projects/THISNet/TCSVT2023-THISNet.gif" alt="">
                         </div>
                     </td>
                     <td>
-                        <font style="line-height: 180%; font-weight: bold">THISNet: Tooth Instance Segmentation on 3D Dental Models via Highlighting Tooth Regions</font>
-                        <br>
-                        <strong>Pengcheng Li</strong>, Chenqiang Gao, Chunfeng Lian, Deyu Meng, Yan Yan. &nbsp; <em>IEEE Transactions on Circuits and Systems for Video Technology, 34(7):5229-5241, 2024. (SCI一区Top， IF：8.3)</em><br>
+                        <font style="line-height: 180%; font-weight: bold">THISNet: Tooth Instance Segmentation on 3D Dental Models via Highlighting Tooth Regions</font><br>
+                        <strong>Pengcheng Li</strong>, Chenqiang Gao, Chunfeng Lian, Deyu Meng, Yan Yan.
+                        &nbsp; <em>IEEE Transactions on Circuits and Systems for Video Technology, 34(7):5229-5241, 2024. (SCI一区Top，IF：8.3)</em><br>
                         [<a href="https://ieeexplore.ieee.org/document/10353988/" target="_blank">Paper</a>]&nbsp;
                         [<a href="https://github.com/li-pengcheng/THISNet" target="_blank">Code</a>]&nbsp;
                     </td>
                 </tr>
-                
-                <!-- Semantic Graph Attention with Explicit Anatomical Association Modeling for Tooth Segmentation from CBCT Images -->
+
                 <tr>
-                    <td>
-                        <br>
-                    </td>
+                    <td><br></td>
                 </tr>
                 <tr>
-                    <td>
+                    <td width="300">
                         <div align="center">
-                            <img width="280" height="200" style="padding: 0pt 10pt 0pt 0pt" src="./projects/SGANet/TMI2022-SGANet.gif" alt="">
+                            <img class="pub-cover" width="280" height="200" src="./projects/SGANet/TMI2022-SGANet.gif" alt="">
                         </div>
                     </td>
                     <td>
-                        <font style="line-height: 180%; font-weight: bold">Semantic Graph Attention with Explicit Anatomical Association Modeling for Tooth Segmentation from CBCT Images</font>
-                        <br>
-                        <strong>Pengcheng Li</strong><sup>*</sup>, Yang Liu<sup>*</sup>, Zhiming Cui, Feng Yang, Yue Zhao, Chunfeng Lian, Chenqiang Gao. &nbsp; <em>IEEE Transactions on Medical Imaging, 41(11):3116-3127, 2022. (SCI一区Top，IF：8.9)</em><br>
+                        <font style="line-height: 180%; font-weight: bold">Semantic Graph Attention with Explicit Anatomical Association Modeling for Tooth Segmentation from CBCT Images</font><br>
+                        <strong>Pengcheng Li</strong><sup>*</sup>, Yang Liu<sup>*</sup>, Zhiming Cui, Feng Yang, Yue Zhao, Chunfeng Lian, Chenqiang Gao.
+                        &nbsp; <em>IEEE Transactions on Medical Imaging, 41(11):3116-3127, 2022. (SCI一区Top，IF：8.9)</em><br>
                         [<a href="https://ieeexplore.ieee.org/document/9785606/" target="_blank">Paper</a>]&nbsp;
                     </td>
                 </tr>
 
-                <!-- TSASNet: Tooth segmentation on dental panoramic X-ray images by Two-Stage Attention Segmentation Network -->
                 <tr>
-                    <td>
-                        <br>
-                    </td>
+                    <td><br></td>
                 </tr>
                 <tr>
-                    <td>
+                    <td width="300">
                         <div align="center">
-                            <img width="300" height="130" style="padding: 0pt 10pt 0pt 0pt" src="./projects/TSASNet/TSASNet.png" alt="">
+                            <img class="pub-cover" width="300" height="130" src="./projects/TSASNet/TSASNet.png" alt="">
                         </div>
                     </td>
                     <td>
-                        <font style="line-height: 180%; font-weight: bold">TSASNet: Tooth segmentation on dental panoramic X-ray images by Two-Stage Attention Segmentation Network</font>
-                        <br>
-                        Yue Zhao<sup>*</sup>, <strong>Pengcheng Li</strong><sup>*</sup>, Chenqiang Gao, Yang Liu, Qiaoyi Chen, Feng Yang, Deyu Meng. &nbsp; <em>Knowledge-Based Systems, 206, 106338, 2020. (SCI一区Top，IF：7.2)</em><br>
+                        <font style="line-height: 180%; font-weight: bold">TSASNet: Tooth segmentation on dental panoramic X-ray images by Two-Stage Attention Segmentation Network</font><br>
+                        Yue Zhao<sup>*</sup>, <strong>Pengcheng Li</strong><sup>*</sup>, Chenqiang Gao, Yang Liu, Qiaoyi Chen, Feng Yang, Deyu Meng.
+                        &nbsp; <em>Knowledge-Based Systems, 206, 106338, 2020. (SCI一区Top，IF：7.2)</em><br>
                         [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0950705120304950" target="_blank">Paper</a>]&nbsp;
                     </td>
                 </tr>
-                
+
                 <tr>
-                    <td>
-                        <br>
-                    </td>
+                    <td><br></td>
                 </tr>
             </tbody>
         </table>
-        
-        <!-- 科研项目 -->
+
+        <!-- Projects -->
         <h2 id="科研项目">科研项目</h2>
         <div class="news-container">
             <div class="scrollable-content">
@@ -392,18 +369,20 @@
                 <span class="dot">&#8226;</span> 数据库系统<br>
             </div>
         </div>
-        
+
+        <!-- Service -->
         <h2 id="社会服务">社会服务</h2>
         <div class="news-container">
             <div class="scrollable-content">
-                <span class="dot">&#8226;</span> 担任TMI, TCSVT, CVPR, ICCV等国际期刊会议审稿人<br>
+                <span class="dot">&#8226;</span> 担任 TMI、TCSVT、CVPR、ICCV 等国际期刊会议审稿人<br>
             </div>
         </div>
 
+        <!-- Footer -->
         <h4>
             <br>
-            <div align="center">
-                <b>&copy;李鹏程</b>&nbsp;<br>
+            <div align="left" class="footer-box">
+                <b>&copy; 李鹏程</b>&nbsp;<br>
                 <a href="https://clustrmaps.com/site/1bo8h" title="Visit tracker">
                     <img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=300&t=tt&d=-1QcsXHGd_Zy5t3s8oV6og0khfHzqlc4gIdK38ek7mw&co=2d78ad&ct=ffffff" alt="Visit tracker">
                 </a>
