@@ -26,9 +26,10 @@ a {
 
 /* ===== 页面整体居中 ===== */
 #layout-content {
-    max-width: 1400px;
-    margin: 110px auto 0 auto;   /* 关键：整体下移，并居中 */
-    padding: 0 30px;
+    width: 100%;
+    max-width: 1100px;          /* 改小，页面会更像标准学术主页 */
+    margin: 110px auto 0 auto;  /* 水平居中 */
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
@@ -44,9 +45,10 @@ a {
 }
 
 nav {
-    max-width: 1400px;
+    width: 100%;
+    max-width: 1100px;          /* 和内容区一致 */
     margin: 0 auto;
-    padding: 18px 30px;
+    padding: 18px 20px;
     box-sizing: border-box;
 }
 
@@ -57,7 +59,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 38px;
+    gap: 34px;
     flex-wrap: wrap;
 }
 
@@ -84,13 +86,15 @@ nav a:hover {
     scroll-margin-top: 110px;
 }
 
-/* ===== 顶部首屏布局（参考学术主页风格） ===== */
+/* ===== 顶部首屏布局 ===== */
 .profile-container {
+    width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 70px;
-    margin-bottom: 40px;
+    gap: 50px;
+    margin: 0 auto 40px auto;
+    box-sizing: border-box;
 }
 
 /* 左：照片 */
@@ -107,9 +111,9 @@ nav a:hover {
 
 /* 中：信息 */
 .profile-middle-centered {
-    flex: 0 1 760px;
+    flex: 1;
     min-width: 0;
-    padding-top: 16px;   /* 关键：把姓名整体往下放，避开导航栏视觉压迫 */
+    padding-top: 12px;
 }
 
 .profile-middle-centered h1 {
@@ -186,12 +190,16 @@ nav a:hover {
 /* ===== 响应式设计 ===== */
 @media (max-width: 1024px) {
     #layout-content {
-        max-width: 1000px;
+        max-width: 900px;
         margin-top: 120px;
     }
 
+    nav {
+        max-width: 900px;
+    }
+
     .profile-container {
-        gap: 40px;
+        gap: 36px;
     }
 
     .profile-left {
@@ -200,11 +208,6 @@ nav a:hover {
 
     .profile-left img {
         width: 220px;
-    }
-
-    .profile-middle-centered {
-        flex-basis: 1;
-        padding-top: 8px;
     }
 
     .profile-middle-centered h1 {
@@ -216,11 +219,11 @@ nav a:hover {
 @media (max-width: 768px) {
     #layout-content {
         margin-top: 120px;
-        padding: 0 20px;
+        padding: 0 18px;
     }
 
     nav {
-        padding: 14px 20px;
+        padding: 14px 18px;
     }
 
     nav ul {
@@ -263,6 +266,7 @@ nav a:hover {
 }
 
 </style>
+
 
 
 
