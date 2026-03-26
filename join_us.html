@@ -24,10 +24,13 @@ body {
     color: #000;
 }
 
+/* 正文更紧凑一点 */
 p {
-    line-height: 1.8;
+    line-height: 1.6;
+    margin: 8px 0;
 }
 
+/* ===== 链接 ===== */
 a {
     text-decoration: none;
 }
@@ -54,9 +57,6 @@ a {
     background: #ffffff;
     z-index: 1000;
     border-bottom: 1px solid #e5e5e5;
-    height: auto !important;
-    padding-top: 0 !important;
-    display: block !important;
 }
 
 nav {
@@ -94,7 +94,38 @@ nav a:hover {
     color: #007BFF;
 }
 
-/* ===== 防止锚点跳转被导航栏遮挡 ===== */
+/* ===== 标题间距优化 ===== */
+h2 {
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+/* ===== 核心：列表样式优化 ===== */
+
+/* 包含 dot 的段落统一样式 */
+p:has(.dot) {
+    margin: 6px 0;
+}
+
+/* 小圆点（缩进 + 对齐关键） */
+.dot {
+    display: inline-block;
+    width: 1.5em;
+    margin-left: 1.5em;
+    vertical-align: top;
+}
+
+/* 让文字块对齐（关键） */
+.dot + br {
+    display: none;
+}
+
+/* 优化多行文本视觉 */
+.dot::before {
+    content: '';
+}
+
+/* ===== 防止锚点被导航遮挡 ===== */
 #招生说明,
 #研究方向,
 #欢迎什么样的学生加入,
@@ -107,13 +138,14 @@ nav a:hover {
     scroll-margin-top: 110px;
 }
 
-/* ===== 修复首个标题被 jemdoc 往上拉的问题 ===== */
+/* ===== 修复 jemdoc 标题问题 ===== */
 #layout-content h1:first-child,
 #layout-content h2:first-child,
 #layout-content h3:first-child {
     margin-top: 0 !important;
 }
 
+/* ===== 响应式 ===== */
 @media (max-width: 1024px) {
     #layout-content {
         max-width: 900px !important;
@@ -141,7 +173,8 @@ nav a:hover {
     }
 }
 
-    </style>
+</style>
+
 
     <title>李鹏程 - 招生说明</title>
     <link rel="shortcut icon" href="./people/lpc/icon/favicon.ico">
