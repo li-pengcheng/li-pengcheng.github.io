@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="./css/jemdoc.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" />
 
-    <style type="text/css">
+    
+<style type="text/css">
 
 /* ===== 全局基础 ===== */
+html {
+    background-color: #f8f9f0;
+}
+
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    background-color: #ffffff;
+    font-family: Georgia, serif;
+    color: #000;
 }
 
 p {
@@ -26,27 +35,34 @@ a {
 
 /* ===== 页面整体居中 ===== */
 #layout-content {
-    width: 100%;
-    max-width: 1100px;          /* 改小，页面会更像标准学术主页 */
-    margin: 110px auto 0 auto;  /* 水平居中 */
-    padding: 0 20px;
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 110px auto 0 auto !important;
+    padding: 0 20px !important;
     box-sizing: border-box;
+    border: none;
+    background: white;
+    text-align: left;
+    vertical-align: top;
 }
 
-/* ===== 导航栏优化 ===== */
+/* ===== 导航栏 ===== */
 .navbar-container {
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
     width: 100%;
     background: #ffffff;
     z-index: 1000;
     border-bottom: 1px solid #e5e5e5;
+    height: auto !important;
+    padding-top: 0 !important;
+    display: block !important;
 }
 
 nav {
     width: 100%;
-    max-width: 1100px;          /* 和内容区一致 */
+    max-width: 1100px;
     margin: 0 auto;
     padding: 18px 20px;
     box-sizing: border-box;
@@ -56,11 +72,15 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     gap: 34px;
     flex-wrap: wrap;
+}
+
+nav li {
+    margin-right: 0 !important;
 }
 
 nav a {
@@ -75,6 +95,12 @@ nav a:hover {
     color: #007BFF;
 }
 
+.clickable-area {
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+}
+
 /* ===== 防止锚点跳转被导航栏遮挡 ===== */
 #home,
 #个人简介,
@@ -86,7 +112,14 @@ nav a:hover {
     scroll-margin-top: 110px;
 }
 
-/* ===== 顶部首屏布局 ===== */
+/* ===== 彻底修复首个标题被 jemdoc 往上拉的问题 ===== */
+#layout-content h1:first-child,
+#layout-content h2:first-child,
+#layout-content h3:first-child {
+    margin-top: 0 !important;
+}
+
+/* ===== 首页首屏 ===== */
 .profile-container {
     width: 100%;
     display: flex;
@@ -97,7 +130,6 @@ nav a:hover {
     box-sizing: border-box;
 }
 
-/* 左：照片 */
 .profile-left {
     flex: 0 0 260px;
 }
@@ -109,27 +141,31 @@ nav a:hover {
     display: block;
 }
 
-/* 中：信息 */
 .profile-middle-centered {
     flex: 1;
     min-width: 0;
-    padding-top: 12px;
+    padding-top: 10px;
 }
 
 .profile-middle-centered h1 {
-    margin: 0 0 12px 0;
+    margin: 0 0 12px 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0.2em;
     font-size: 34px;
     line-height: 1.25;
     color: #000;
     white-space: nowrap;
     overflow: visible;
+    border-bottom: 2px solid #8a8584;
 }
 
 .profile-middle-centered h2 {
     margin: 0 0 24px 0;
+    padding-top: 0.5em;
     font-size: 22px;
     font-weight: 600;
     color: #555;
+    border-bottom: 2px solid #8a8584;
 }
 
 .profile-middle-centered p {
@@ -161,18 +197,24 @@ nav a:hover {
 }
 
 /* ===== 新闻滚动 ===== */
+.news-container {
+    max-height: 180px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
 .news-container .scrollable-content {
     max-height: 300px;
     overflow-y: auto;
+    padding-right: 20px;
 }
 
-/* ===== 社会服务卡片（兼容保留） ===== */
-.service-card {
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+.news-container::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.news-container::-webkit-scrollbar-thumb {
+    background-color: #d8d7d7;
 }
 
 /* ===== 论文图片优化 ===== */
@@ -181,17 +223,17 @@ nav a:hover {
     height: auto;
 }
 
-/* ===== 页脚图片 ===== */
+/* ===== 页脚 ===== */
 .footer-box img {
     max-width: 300px;
     height: auto;
 }
 
-/* ===== 响应式设计 ===== */
+/* ===== 响应式 ===== */
 @media (max-width: 1024px) {
     #layout-content {
-        max-width: 900px;
-        margin-top: 120px;
+        max-width: 900px !important;
+        margin-top: 120px !important;
     }
 
     nav {
@@ -218,8 +260,8 @@ nav a:hover {
 
 @media (max-width: 768px) {
     #layout-content {
-        margin-top: 120px;
-        padding: 0 18px;
+        margin-top: 120px !important;
+        padding: 0 18px !important;
     }
 
     nav {
@@ -266,7 +308,6 @@ nav a:hover {
 }
 
 </style>
-
 
 
 
@@ -355,7 +396,9 @@ nav a:hover {
 
         <p style="text-align: justify; line-height: 1.6;">
             课题组长期招收对计算机视觉与智能医学影像分析感兴趣的本科生、硕士生及博士生，欢迎具有良好数学基础与编程能力、踏实认真且具备科研兴趣的同学加入。
+            具体信息请查看<a href="join_us.html">【招生说明】</a>。
         </p>
+
 
         <!-- News -->
         <h2 id="学术新闻">学术新闻</h2>
