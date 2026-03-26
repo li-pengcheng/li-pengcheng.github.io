@@ -20,9 +20,52 @@ p {
     line-height: 1.8;
 }
 
+a {
+    text-decoration: none;
+}
+
+/* ===== 页面整体居中 ===== */
+#layout-content {
+    max-width: 1400px;
+    margin: 110px auto 0 auto;   /* 关键：整体下移，并居中 */
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
 /* ===== 导航栏优化 ===== */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 30px;
+    box-sizing: border-box;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+    flex-wrap: wrap;
+}
+
 nav a {
     transition: background-color 0.3s, color 0.3s;
+    color: #1f4fa3;
+    font-size: 17px;
+    font-weight: 600;
 }
 
 nav a:hover {
@@ -30,7 +73,7 @@ nav a:hover {
     color: #007BFF;
 }
 
-/* 防止跳转被导航栏遮挡 */
+/* ===== 防止锚点跳转被导航栏遮挡 ===== */
 #home,
 #个人简介,
 #学术新闻,
@@ -38,20 +81,21 @@ nav a:hover {
 #科研项目,
 #课程教学,
 #社会服务 {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 110px;
 }
 
-/* ===== 顶部首屏布局（核心） ===== */
+/* ===== 顶部首屏布局（参考学术主页风格） ===== */
 .profile-container {
     display: flex;
-    align-items: center;
-    gap: 50px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 70px;
     margin-bottom: 40px;
 }
 
 /* 左：照片 */
 .profile-left {
-    flex: 0 0 auto;
+    flex: 0 0 260px;
 }
 
 .profile-left img {
@@ -61,45 +105,64 @@ nav a:hover {
     display: block;
 }
 
-/* 右：信息（参考学术主页风格） */
+/* 中：信息 */
 .profile-middle-centered {
-    flex: 1;
+    flex: 0 1 760px;
+    min-width: 0;
+    padding-top: 16px;   /* 关键：把姓名整体往下放，避开导航栏视觉压迫 */
 }
 
-/* 姓名 */
 .profile-middle-centered h1 {
-    margin: 0 0 10px 0;
+    margin: 0 0 12px 0;
     font-size: 34px;
+    line-height: 1.25;
     color: #000;
     white-space: nowrap;
+    overflow: visible;
 }
 
-/* 职称 */
 .profile-middle-centered h2 {
-    margin: 0 0 20px 0;
+    margin: 0 0 24px 0;
     font-size: 22px;
-    font-weight: normal;
+    font-weight: 600;
     color: #555;
 }
 
-/* 信息段落 */
 .profile-middle-centered p {
-    margin-bottom: 14px;
-    line-height: 1.8;
+    margin: 0 0 16px 0;
+    line-height: 1.9;
 }
 
-/* 链接 */
-.profile-middle-centered a {
-    text-decoration: none;
+.profile-middle-centered .affiliation {
+    margin-bottom: 28px;
 }
 
-/* ===== 学术新闻滚动 ===== */
+.profile-middle-centered .contact {
+    margin-bottom: 24px;
+}
+
+.profile-middle-centered .contact strong {
+    display: inline-block;
+    min-width: 72px;
+    color: #000;
+}
+
+.profile-middle-centered .links {
+    margin-top: 8px;
+}
+
+.profile-middle-centered .links a {
+    color: #1f4fa3;
+    font-weight: 500;
+}
+
+/* ===== 新闻滚动 ===== */
 .news-container .scrollable-content {
     max-height: 300px;
     overflow-y: auto;
 }
 
-/* ===== 社会服务卡片（保留兼容） ===== */
+/* ===== 社会服务卡片（兼容保留） ===== */
 .service-card {
     border: 1px solid #ccc;
     margin: 10px;
@@ -122,26 +185,59 @@ nav a:hover {
 
 /* ===== 响应式设计 ===== */
 @media (max-width: 1024px) {
+    #layout-content {
+        max-width: 1000px;
+        margin-top: 120px;
+    }
 
     .profile-container {
-        gap: 30px;
+        gap: 40px;
+    }
+
+    .profile-left {
+        flex-basis: 220px;
     }
 
     .profile-left img {
         width: 220px;
     }
 
+    .profile-middle-centered {
+        flex-basis: 1;
+        padding-top: 8px;
+    }
+
     .profile-middle-centered h1 {
         font-size: 30px;
+        white-space: normal;
     }
 }
 
 @media (max-width: 768px) {
+    #layout-content {
+        margin-top: 120px;
+        padding: 0 20px;
+    }
+
+    nav {
+        padding: 14px 20px;
+    }
+
+    nav ul {
+        gap: 18px;
+        justify-content: flex-start;
+    }
 
     .profile-container {
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+        gap: 24px;
+    }
+
+    .profile-left,
+    .profile-middle-centered {
+        width: 100%;
+        flex: none;
     }
 
     .profile-left img {
@@ -149,20 +245,25 @@ nav a:hover {
     }
 
     .profile-middle-centered {
-        width: 100%;
+        padding-top: 0;
     }
 
     .profile-middle-centered h1 {
-        font-size: 26px;
+        font-size: 28px;
         white-space: normal;
     }
 
     .profile-middle-centered h2 {
         font-size: 20px;
     }
+
+    .profile-middle-centered .contact strong {
+        min-width: 60px;
+    }
 }
 
 </style>
+
 
 
     <title>李鹏程 - 个人主页</title>
@@ -198,37 +299,35 @@ nav a:hover {
     </div>
 
     <div id="layout-content">
-        <!-- Header -->
-        <div class="profile-container" id="home">
+    <!-- Header -->
+    <div class="profile-container" id="home">
+        <div class="profile-left">
+            <img id="photo" src="./people/lpc/avatar.jpg" alt="李鹏程">
+        </div>
 
-    <!-- 左：照片 -->
-    <div class="profile-left">
-        <img id="photo" src="./people/lpc/avatar.jpg" alt="李鹏程">
+        <div class="profile-middle-centered">
+            <h1>李鹏程</h1>
+            <h2>副教授</h2>
+
+            <p class="affiliation">
+                <a href="https://cs.hainanu.edu.cn/" target="_blank">计算机科学与技术学院</a><br>
+                <a href="https://www.hainanu.edu.cn/" target="_blank">海南大学</a>
+            </p>
+
+            <p class="contact">
+                <strong>办公室：</strong>海甸校区农科主楼1116<br>
+                <strong>邮箱：</strong>lipengcheng@hainanu.edu.cn
+            </p>
+
+            <p class="links">
+                <a href="https://scholar.google.com/citations?user=1q02xOYAAAAJ&hl=zh-CN" target="_blank">[Google Scholar]</a>
+                &nbsp;&nbsp;
+                <a href="https://github.com/li-pengcheng" target="_blank">[GitHub]</a>
+            </p>
+        </div>
     </div>
 
-    <!-- 右：信息 -->
-    <div class="profile-middle-centered">
-        <h1>李鹏程</h1>
-        <h2>副教授</h2>
 
-        <p>
-            <a href="https://cs.hainanu.edu.cn/" target="_blank">计算机科学与技术学院</a><br>
-            <a href="https://www.hainanu.edu.cn/" target="_blank">海南大学</a>
-        </p>
-
-        <p>
-            <strong>办公室：</strong>海甸校区农科主楼1116<br>
-            <strong>邮箱：</strong>lipengcheng@hainanu.edu.cn
-        </p>
-
-        <p>
-            <a href="https://scholar.google.com/citations?user=1q02xOYAAAAJ&hl=zh-CN" target="_blank">[Google Scholar]</a>
-            &nbsp;&nbsp;
-            <a href="https://github.com/li-pengcheng" target="_blank">[GitHub]</a>
-        </p>
-    </div>
-
-</div>
 
 
         <!-- Biography -->
