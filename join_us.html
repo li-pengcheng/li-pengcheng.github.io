@@ -1,150 +1,321 @@
-<div class="section-block">
-<h2>研究方向</h2>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="李鹏程, 招生说明, 海南大学, 口腔多模态医学图像分析, 计算机视觉, 机器学习">
+    <meta name="description" content="李鹏程课题组招生说明">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p>
-课题组主要围绕<strong>口腔多模态医学图像分析、计算机视觉与机器学习</strong>开展研究，重点关注多模态口腔影像理解（X-ray、CBCT、口扫数据等）、牙齿结构化建模、空间关系表征、分割检测、多模态融合以及相关智能诊疗分析方法。
-</p>
+    <link rel="stylesheet" href="./css/jemdoc.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" />
 
-<p>
-研究内容既包含具有学术挑战性的基础问题，也面向口腔医学场景中的实际应用需求，强调方法创新与实际价值相结合。
-</p>
-</div>
+    <style type="text/css">
+
+/* ===== 全局基础 ===== */
+html {
+    background-color: #ffffff;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    background-color: #ffffff;
+    font-family: Georgia, serif;
+    color: #000;
+}
+
+p {
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===== 页面整体居中 ===== */
+#layout-content {
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 110px auto 0 auto !important;
+    padding: 0 20px 30px 20px !important;
+    box-sizing: border-box;
+    border: none;
+    background: white;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* ===== 导航栏 ===== */
+.navbar-container {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e5e5;
+    height: auto !important;
+    padding-top: 0 !important;
+    display: block !important;
+}
+
+nav {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    box-sizing: border-box;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin-right: 0 !important;
+}
+
+nav a {
+    transition: background-color 0.3s, color 0.3s;
+    color: #1f4fa3;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+    color: #007BFF;
+}
+
+/* ===== 防止锚点跳转被导航栏遮挡 ===== */
+#招生说明,
+#研究方向,
+#欢迎什么样的学生加入,
+#课题组的培养理念,
+#对学生的基本要求,
+#课题组的优势,
+#关于本科生科研,
+#联系方式与申请材料,
+#一点说明 {
+    scroll-margin-top: 110px;
+}
+
+/* ===== 修复首个标题被 jemdoc 往上拉的问题 ===== */
+#layout-content h1:first-child,
+#layout-content h2:first-child,
+#layout-content h3:first-child {
+    margin-top: 0 !important;
+}
+
+@media (max-width: 1024px) {
+    #layout-content {
+        max-width: 900px !important;
+        margin-top: 120px !important;
+    }
+
+    nav {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    #layout-content {
+        margin-top: 120px !important;
+        padding: 0 18px 24px 18px !important;
+    }
+
+    nav {
+        padding: 14px 18px;
+    }
+
+    nav ul {
+        gap: 18px;
+        justify-content: flex-start;
+    }
+}
+
+    </style>
+
+    <title>李鹏程 - 招生说明</title>
+    <link rel="shortcut icon" href="./people/lpc/icon/favicon.ico">
+    <script src="./scripts/scroll.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar-container">
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="index_cn.html">返回主页</a></li>
+                    <li><a onclick="scrollToSection('研究方向')" style="cursor: pointer;">研究方向</a></li>
+                    <li><a onclick="scrollToSection('欢迎什么样的学生加入')" style="cursor: pointer;">适合加入的学生</a></li>
+                    <li><a onclick="scrollToSection('课题组的培养理念')" style="cursor: pointer;">培养理念</a></li>
+                    <li><a onclick="scrollToSection('对学生的基本要求')" style="cursor: pointer;">基本要求</a></li>
+                    <li><a onclick="scrollToSection('课题组的优势')" style="cursor: pointer;">课题组优势</a></li>
+                    <li><a onclick="scrollToSection('关于本科生科研')" style="cursor: pointer;">本科生科研</a></li>
+                    <li><a onclick="scrollToSection('联系方式与申请材料')" style="cursor: pointer;">联系方式</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="layout-content">
+
+        <h2 id="招生说明">招生说明</h2>
+        <p style="text-align: justify; line-height: 1.6;">
+            欢迎对计算机视觉、机器学习与智能医学图像分析感兴趣的本科生、硕士生及博士生了解课题组情况。选择导师和课题组，本质上是一个双向匹配的过程，因此在联系之前，建议你先认真了解我的研究方向、培养方式和对学生的基本要求，再结合自己的兴趣、性格、时间投入和未来规划进行判断。
+        </p>
+        <p style="text-align: justify; line-height: 1.6;">
+            我希望招收到的学生，不仅能够在若干年后顺利毕业，更重要的是能够在这一阶段真正建立起解决问题的能力、持续学习的能力以及良好的学术与技术素养。相比短期结果，我更看重学生是否能够在系统训练中不断成长，最终形成扎实、可靠、可持续发展的能力结构。
+        </p>
+
+        <h2 id="研究方向">研究方向</h2>
+               <p style="text-align: justify; line-height: 1.6;">
+            课题组主要围绕<strong>口腔多模态医学图像分析、计算机视觉与机器学习</strong>开展研究，重点关注多模态口腔影像理解（X-ray、CBCT、口扫数据等）、牙齿结构化建模、空间关系表征、分割检测、多模态融合以及相关智能诊疗分析方法。
+        </p>
+
+        <p style="text-align: justify; line-height: 1.6;">
+            研究内容既包含具有学术挑战性的基础问题，也面向口腔医学场景中的实际应用需求，强调方法创新与实际价值相结合。通过结合深度学习方法与实际医学数据，探索具有临床意义和工程价值的解决方案。
+        </p>
 
 
-<div class="section-block">
-<h2>欢迎什么样的学生加入</h2>
+        <h2 id="欢迎什么样的学生加入">欢迎什么样的学生加入</h2>
 
-<p>
-课题组欢迎对<strong>计算机视觉、医学图像分析、机器学习、深度学习</strong>等方向有兴趣的本科生、硕士生和博士生加入。相比“短期拿结果”，我更看重学生是否具备长期成长为优秀研究者或优秀技术人才的潜力。
-</p>
+        <p style="text-align: justify; line-height: 1.6;">
+            课题组欢迎对<strong>计算机视觉、医学图像分析、机器学习、深度学习</strong>等方向有兴趣的本科生、硕士生和博士生加入。相比“短期拿结果”，我更看重学生是否具备长期成长为优秀研究者或优秀技术人才的潜力。
+        </p>
 
-<ul class="clean-list">
-<li>对科研或技术问题有真实兴趣，而不是仅把研究生阶段当作获得学历的过程</li>
-<li>愿意投入足够时间与精力，能够长期稳定推进学习与研究</li>
-<li>具备一定数学基础、编程能力与英文阅读能力，并愿意持续提升</li>
-<li>做事认真踏实，能够接受反复修改与持续打磨</li>
-<li>具备良好的沟通能力、责任意识与团队合作精神</li>
-</ul>
+        <p style="text-align: justify; line-height: 1.6;">
+            一般来说，适合加入课题组的同学应具备以下特点：
+        </p>
 
-<p>
-如果你的目标只是相对轻松地完成学业、尽快拿到文凭，或者对科研和技术研究本身缺乏兴趣，那么课题组可能并不是最适合你的选择。
-</p>
+        <ul>
+            <li>对科研或技术问题有真实兴趣，而不是仅把研究生阶段当作获得学历的过程。</li>
+            <li>愿意投入足够的时间和精力，能够长期、稳定地推进学习和研究工作。</li>
+            <li>具备一定的数学基础、编程能力和英文阅读能力，并愿意持续补足短板。</li>
+            <li>做事认真踏实，能够接受反复修改、反复推敲和持续打磨。</li>
+            <li>具有良好的沟通能力、责任意识和团队合作精神。</li>
+        </ul>
 
-</div>
-
-
-<div class="section-block">
-<h2>课题组的培养理念</h2>
-
-<p>
-我始终认为，研究生阶段最重要的不是完成若干任务，而是实现能力的系统提升。课题组希望学生在毕业时，不只是“做过一些实验”，而是真正具备扎实的科研能力与技术能力。
-</p>
-
-<ul class="clean-list">
-<li>独立阅读与分析学术文献的能力</li>
-<li>凝练问题与设计技术方案的能力</li>
-<li>扎实的代码实现与实验验证能力</li>
-<li>规范清晰的论文写作与学术表达能力</li>
-<li>与他人合作推进科研工作的能力</li>
-</ul>
-
-<p>
-在培养过程中，我会深度参与选题、方案设计、实验分析与论文写作，帮助学生在研究路径、阶段目标和成果产出上做出更合理的规划。严格要求的目的，并不是增加压力，而是帮助学生在有限时间内获得真正的成长。
-</p>
-
-</div>
+        <p style="text-align: justify; line-height: 1.6;">
+            如果你的目标只是相对轻松地完成学业、尽快拿到文凭，或者对科研和技术研究本身缺乏兴趣，那么课题组可能并不是最适合你的选择。
+        </p>
 
 
-<div class="section-block">
-<h2>对学生的基本要求</h2>
+        <h2 id="课题组的培养理念">课题组的培养理念</h2>
 
-<p>
-科研训练强调主动性、自觉性与执行力。研究工作通常伴随着长期投入与反复试错，因此需要具备稳定心态与持续投入的能力。
-</p>
+        <p style="text-align: justify; line-height: 1.6;">
+            我始终认为，研究生阶段最重要的不是简单完成若干任务，而是系统提升能力。课题组希望学生在毕业时，不只是“做过一些实验”，而是真正具备以下几方面能力：
+        </p>
 
-<ul class="clean-list">
-<li><strong>主动学习：</strong>遇到问题优先查阅资料、阅读文献并进行思考，而不是完全被动等待安排</li>
-<li><strong>认真做事：</strong>代码、实验、论文与协作均需保持严谨与负责的态度</li>
-<li><strong>接受打磨：</strong>论文、图表与实验需要反复修改，优秀成果往往源于持续优化</li>
-<li><strong>及时沟通：</strong>不鼓励过度追求“完美”后再汇报，应基于阶段成果及时交流并不断修正方向</li>
-<li><strong>持续投入：</strong>科研难以依靠零散时间完成，需要长期稳定的投入</li>
-<li><strong>遵守规范：</strong>诚实守信，严格遵守学术规范，杜绝敷衍与不端行为</li>
-</ul>
+        <ul>
+            <li>独立阅读和分析文献的能力。</li>
+            <li>凝练问题和设计技术方案的能力。</li>
+            <li>扎实的代码实现与实验验证能力。</li>
+            <li>规范、清晰的论文写作与学术表达能力。</li>
+            <li>与他人合作推进研究工作的能力。</li>
+        </ul>
 
-<p>
-我不鼓励“差不多就行”的态度。一项工作从“能做”到“做好”的差距，往往体现在是否愿意多思考一步、多修改一次、多坚持一段时间。
-</p>
+        <p style="text-align: justify; line-height: 1.6;">
+            在培养过程中，我会认真参与学生的选题、方案讨论、实验分析、论文写作与修改，也会尽可能帮助学生在研究方向选择、阶段规划、成果产出和后续发展方面做出更合适的判断。
+        </p>
 
-</div>
-
-
-<div class="section-block">
-<h2>课题组的优势</h2>
-
-<ul class="clean-list">
-<li><strong>研究方向稳定：</strong>长期聚焦口腔多模态医学图像分析与计算机视觉，利于持续积累</li>
-<li><strong>科研经费充足：</strong>主持多项国家级及省部级项目，支持实验、投稿与学术交流</li>
-<li><strong>训练体系系统：</strong>从文献阅读、代码实现到论文写作形成完整培养链条</li>
-<li><strong>导师投入充分：</strong>全过程参与指导，重视细节与阶段反馈</li>
-<li><strong>发展路径多元：</strong>支持继续深造、攻读博士或进入高水平技术岗位</li>
-</ul>
-
-</div>
+        <p style="text-align: justify; line-height: 1.6;">
+            对学生严格要求，并不是为了增加压力，而是希望大家在有限的几年时间里真正获得实质性的成长，建立长期受益的能力体系。
+        </p>
 
 
-<div class="section-block">
-<h2>关于本科生科研</h2>
+        <h2 id="对学生的基本要求">对学生的基本要求</h2>
 
-<p>
-课题组欢迎有志于深造的本科生参与科研训练。本科阶段更强调兴趣培养、方法训练与能力提升，而非短期成果。
-</p>
+        <p style="text-align: justify; line-height: 1.6;">
+            课题组强调科研训练的主动性、自觉性和执行力。研究工作往往是长期、枯燥并伴随着反复失败和修改的过程，因此我希望学生能够做到：
+        </p>
 
-<ul class="clean-list">
-<li>对人工智能、计算机视觉或医学图像分析有明确兴趣</li>
-<li>愿意投入稳定时间学习 Python 与深度学习框架</li>
-<li>能够完成文献阅读、代码复现与阶段任务</li>
-<li>有继续读研或深造计划</li>
-</ul>
+        <ul>
+            <li><strong>主动学习：</strong>遇到问题时优先查阅资料、阅读文献并进行独立思考，而不是完全依赖安排。</li>
+            <li><strong>认真做事：</strong>无论代码、实验还是论文，都需要严谨、细致、可复现。</li>
+            <li><strong>接受打磨：</strong>论文、图表和方法往往需要反复修改，优秀工作往往是在不断改进中形成的。</li>
+            <li><strong>及时沟通：</strong>不鼓励过分追求完美后才汇报，应基于阶段性成果及时交流，在反馈中不断优化。</li>
+            <li><strong>持续投入：</strong>科研需要长期稳定的时间投入，而非零散应付。</li>
+            <li><strong>遵守规范：</strong>坚持学术诚信，严禁任何形式的学术不端行为。</li>
+        </ul>
 
-<p>
-对于表现优秀且投入稳定的本科生，将进一步支持其参与项目研究、论文工作及后续深造发展。
-</p>
-
-</div>
-
-
-<div class="section-block">
-<h2>联系方式与申请材料</h2>
-
-<p>
-如有意向加入课题组，请通过邮件联系，并尽量提供完整材料以便评估。
-</p>
-
-<ul class="clean-list">
-<li>个人简历</li>
-<li>成绩单</li>
-<li>项目或科研经历说明</li>
-<li>其他体现能力与潜力的材料</li>
-</ul>
-
-<p>
-<strong>邮件标题：</strong>姓名 + 申请类型（本科科研 / 硕士 / 博士）<br>
-<strong>联系邮箱：</strong>
-<a href="mailto:lipengcheng@hainanu.edu.cn">lipengcheng@hainanu.edu.cn</a>
-</p>
-
-</div>
+        <p style="text-align: justify; line-height: 1.6;">
+            我不鼓励“差不多就可以”的态度。很多时候，从“能做”到“做好”的差距，往往来自是否愿意多思考一点、多修改一点、多坚持一步。
+        </p>
 
 
-<div class="section-block">
-<h2>一点说明</h2>
+        <h2 id="课题组的优势">课题组的优势</h2>
 
-<p>
-选择导师与课题组本质上是一个双向匹配的过程。我希望加入课题组的同学，能够认同我们对研究质量与成长节奏的要求，并在这样的环境中获得真正提升。
-</p>
+        <p style="text-align: justify; line-height: 1.6;">
+            课题组在相关方向上具备较好的研究基础和培养条件，主要体现在以下几个方面：
+        </p>
 
-<p>
-如果你愿意认真投入、接受系统训练，并把事情做到更好，课题组会尽力为你提供支持、指导与成长机会。
-</p>
+        <ul>
+            <li><strong>研究方向稳定：</strong>长期围绕口腔医学影像与计算机视觉展开，方向清晰。</li>
+            <li><strong>科研经费支持：</strong>具备稳定项目与经费，支持实验、论文与学术交流。</li>
+            <li><strong>系统训练体系：</strong>从基础到论文形成完整训练闭环。</li>
+            <li><strong>导师投入充分：</strong>重视反馈、讨论与论文打磨。</li>
+            <li><strong>发展路径清晰：</strong>支持读博、科研或进入高水平技术岗位。</li>
+        </ul>
 
-</div>
+
+        <h2 id="关于本科生科研">关于本科生科研</h2>
+
+        <p style="text-align: justify; line-height: 1.6;">
+            课题组欢迎有志于继续深造的本科生参与科研训练。本科阶段更重要的是培养科研兴趣与能力，而不是急于产出成果。
+        </p>
+
+        <p style="text-align: justify; line-height: 1.6;">
+            适合参与的同学通常应具备：
+        </p>
+
+        <ul>
+            <li>对人工智能或计算机视觉有明确兴趣</li>
+            <li>具备基础编程能力并愿意持续提升</li>
+            <li>能够稳定投入时间参与科研训练</li>
+            <li>有读研或长期发展的规划</li>
+        </ul>
+
+
+        <h2 id="联系方式与申请材料">联系方式与申请材料</h2>
+
+        <p style="text-align: justify; line-height: 1.6;">
+            如有意向加入课题组，请通过邮件联系，并附上以下材料：
+        </p>
+
+        <ul>
+            <li>个人简历</li>
+            <li>成绩单</li>
+            <li>项目或科研经历说明</li>
+            <li>其他补充材料（论文、竞赛等）</li>
+        </ul>
+
+        <p style="text-align: justify; line-height: 1.6;">
+            <strong>邮件标题：</strong>姓名 + 申请类型
+        </p>
+
+        <p style="text-align: justify; line-height: 1.6;">
+            <strong>邮箱：</strong>
+            <a href="mailto:lipengcheng@hainanu.edu.cn">lipengcheng@hainanu.edu.cn</a>
+        </p>
+
+
+        <h2 id="一点说明">一点说明</h2>
+
+        <p style="text-align: justify; line-height: 1.6;">
+            选择导师与课题组是一个双向匹配的过程。我希望学生不仅能够适应团队的要求，也能在这样的环境中获得真正的成长。
+        </p>
+
+        <p style="text-align: justify; line-height: 1.6;">
+            如果你愿意投入时间、接受训练，并持续提升自己，课题组会尽力为你提供良好的科研环境与成长机会。
+        </p>
+
