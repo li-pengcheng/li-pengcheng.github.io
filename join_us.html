@@ -172,7 +172,31 @@ p:has(.dot) {
         justify-content: flex-start;
     }
 }
+/* ===== 修复列表换行错位（不改HTML） ===== */
 
+/* 整个段落做“悬挂缩进” */
+p {
+    text-indent: -1.5em;
+    padding-left: 1.8em;
+}
+
+/* 圆点位置 */
+.dot {
+    display: inline-block;
+    width: 1.5em;
+}
+
+/* 每一条之间更紧凑 */
+p br {
+    line-height: 1.6;
+}
+
+/* 只影响带 dot 的段落（更安全） */
+p:has(.dot) {
+    margin: 6px 0;
+}
+
+        
 </style>
 
 
